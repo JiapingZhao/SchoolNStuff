@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School N Stuff</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">School N Stuff</h1>
+        
+        <div class="collapsible-section">
+            <div class="section-header" onclick="toggleSection('world-clocks')">
+                <h2>World Clocks</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="section-content" id="world-clocks-content">
+                <div class="world-clocks">
+                    <div class="clock-wrapper">
+                        <h3>NYC</h3>
+                        <div class="timezone-info">UTC-4 (EDT)</div>
+                        <div class="clock" id="new-york"></div>
+                        <div class="digital-time" id="new-york-time">00:00</div>
+                    </div>
+                    <div class="clock-wrapper">
+                        <h3>London</h3>
+                        <div class="timezone-info">UTC+1 (BST)</div>
+                        <div class="clock" id="london"></div>
+                        <div class="digital-time" id="london-time">00:00</div>
+                    </div>
+                    <div class="clock-wrapper">
+                        <h3>Beijing</h3>
+                        <div class="timezone-info">UTC+8 (CST)</div>
+                        <div class="clock" id="beijing"></div>
+                        <div class="digital-time" id="beijing-time">00:00</div>
+                    </div>
+                    <div class="clock-wrapper">
+                        <h3>Tokyo</h3>
+                        <div class="timezone-info">UTC+9 (JST)</div>
+                        <div class="clock" id="tokyo"></div>
+                        <div class="digital-time" id="tokyo-time">00:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapsible-section">
+            <div class="section-header" onclick="toggleSection('deadline-tracker')">
+                <h2>Deadline Tracker</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="section-content" id="deadline-tracker-content">
+                <div class="deadline-container">
+                    <div class="deadline-input">
+                        <input type="text" id="deadline-title" placeholder="Event Title">
+                        <input type="date" id="deadline-date">
+                        <button onclick="addDeadline()">Add Deadline</button>
+                    </div>
+                    <div class="deadlines-list" id="deadlines-list">
+                        <!-- Deadlines will be added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
